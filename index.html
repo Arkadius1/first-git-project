@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>firstpage</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600i,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /*global*/
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /*GRID*/
+
+        .row:before,
+        .row:after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            min-height: 1px;
+            padding: 0px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .col-offset-1 {
+            margin-left: 8.33%;
+        }
+
+        .col-offset-2 {
+            margin-left: 16.66%;
+        }
+
+        .col-offset-3 {
+            margin-left: 25%;
+        }
+
+        .col-offset-4 {
+            margin-left: 33.33%;
+        }
+
+        .col-offset-5 {
+            margin-left: 41.66%;
+        }
+
+        .col-offset-6 {
+            margin-left: 50%;
+        }
+
+        .col-offset-7 {
+            margin-left: 58.33%;
+        }
+
+        .col-offset-8 {
+            margin-left: 66.66%;
+        }
+
+        .col-offset-9 {
+            margin-left: 75%;
+        }
+
+        .col-offset-10 {
+            margin-left: 83.33%;
+        }
+
+        .col-offset-11 {
+            margin-left: 91.66%;
+        }
+
+        .col-offset-12 {
+            margin-left: 100%;
+        }
+
+        /*navigation*/
+
+        header {
+            background-color: #313234;
+            height: 50px;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                text-align: center;
+                background-color: #313234;
+                margin-bottom: 130px;
+            }
+        }
+
+        header>nav ul {
+            margin: 0;
+            padding: 0;
+            float: right;
+            line-height: 50px;
+        }
+
+        @media (max-width: 767px) {
+            header>nav ul {
+                float: none;
+                line-height: 50px;
+            }
+        }
+
+        header>nav ul>li {
+            padding: 0 20px;
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        @media (max-width: 767px) {
+            header>nav ul>li {
+                display: block;
+                background-color: #313234;
+
+            }
+        }
+
+        header>nav ul>li>a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 767px) {
+            header>nav ul li:hover {
+                background-color: #525760;
+            }
+        }
+
+        header>nav ul li:hover {
+            background-color: #525760;
+        }
+
+        header>nav img {
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            header>nav img {
+                width: 20vh;
+                padding-bottom: 0px;
+            }
+        }
+
+        /*welcome section*/
+
+        .welcome-section {
+            height: 400px;
+            margin: 0 auto;
+            padding: 0;
+            background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*@media (max-width: 767px) {
+    .welcome-section{
+        margin-top: 145px;   
+    }
+}*/
+
+        .slogan {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            max-width: 400px;
+            top: 250px;
+            right: 0;
+        }
+
+        /*@media (max-width: 767px) {
+    .slogan{
+       top : 300px;   
+    }
+}*/
+
+        .slogan h1 {
+            color: white;
+            text-align: left;
+            padding-left: 10px;
+            font-family: 'serif';
+        }
+
+        /* advantage section*/
+
+        .advantage-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .icon {
+            padding: 16px;
+            font-size: 32px;
+            display: inline-block;
+            height: 70px;
+            width: 70px;
+            border-radius: 10%;
+            background-color: grey;
+            margin-top: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: white;
+            transition: 0.3s;
+        }
+
+        .advantage:hover {
+            color: grey;
+
+        }
+
+        /* some section*/
+
+        .some-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        /*gallery section*/
+
+        .rows {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .img-gallery {
+            position: relative;
+            margin: 0 auto;
+
+        }
+
+        .layer-parent {
+            height: 100%;
+
+        }
+
+        /*
+.img-gallery img {
+    height: inherit; 
+}*/
+
+        .layer {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 0%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: 0.4s ease;
+        }
+
+        .icons {
+            position: absolute;
+            text-align: center;
+            font-size: 15px;
+            top: 30%;
+            left: 50%;
+            color: rgba(255, 255, 255, 0.7);
+            transform: translate(-50%, -50%);
+        }
+
+        .img-gallery:hover .layer {
+            opacity: 1;
+            height: 100%;
+        }
+
+
+        /* team section */
+
+        .team-section {
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .team-section img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+
+        /* picture section */
+
+        .picture-section {
+            margin-top: 60px;
+            background-color: #B4B0B0;
+            color: white;
+            text-align: center;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .picture-section img {
+            border-radius: 20px;
+            float: left;
+        }
+
+        /* number section */
+
+        .number-section {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .number-section h2 {
+            margin: 0;
+        }
+
+        .number-section p {
+            margin-top: 5px;
+            font-size: 15px;
+            color: grey;
+        }
+
+        /* footer */
+
+        footer {
+            color: white;
+            background-color: #808080;
+            text-align: center;
+            font-size: 15px;
+        }
+
+
+        footer>p {
+            padding: 10px;
+            color: white;
+            background-color: #484848;
+        }
+
+        footer>h3:after {
+            box-shadow: 0 0 0 1px #fff;
+            content: "";
+            width: 30px;
+        }
+
+        /*media*/
+
+        @media (max-width: 767px) {
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+            .col-s-2 {
+                width: 16.66%;
+            }
+            .col-s-3 {
+                width: 25%;
+            }
+            .col-s-4 {
+                width: 33.33%;
+            }
+            .col-s-5 {
+                width: 41.66%;
+            }
+            .col-s-6 {
+                width: 50%;
+            }
+            .col-s-7 {
+                width: 58.33%;
+            }
+            .col-s-8 {
+                width: 66.66%;
+            }
+            .col-s-9 {
+                width: 75%;
+            }
+            .col-s-10 {
+                width: 83.33%;
+            }
+            .col-s-11 {
+                width: 91.66%;
+            }
+            .col-s-12 {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            /* For desktop: */
+            .col-m-1 {
+                width: 8.33%;
+            }
+            .col-m-2 {
+                width: 16.66%;
+            }
+            .col-m-3 {
+                width: 25%;
+            }
+            .col-m-4 {
+                width: 33.33%;
+            }
+            .col-m-5 {
+                width: 41.66%;
+            }
+            .col-m-6 {
+                width: 50%;
+            }
+            .col-m-7 {
+                width: 58.33%;
+            }
+            .col-m-8 {
+                width: 66.66%;
+            }
+            .col-m-9 {
+                width: 75%;
+            }
+            .col-m-10 {
+                width: 83.33%;
+            }
+            .col-m-11 {
+                width: 91.66%;
+            }
+            .col-m-12 {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <img src="//placehold.it/150x30">
+            <ul class="row">
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="welcome-section">
+        <div class="slogan">
+            <h1>Pellentesque habitant morbi tristique senectus fames.</h1>
+        </div>
+    </section>
+    <section class="advantage-section container">
+        <div class="row">
+            <div class="col-4 col-s-12 advantage">
+                <i class=" icon far fa-save"></i>
+                <h4>Pellentesque habitant</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus.Pellentesque habitant morbi tristique senectus et netus. </p>
+            </div>
+            <div class="col-4 col-s-12 advantage">
+                <i class=" icon fas fa-pen-nib"></i>
+                <h4>Pellentesque habitant</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus. Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+            <div class="col-4 col-s-12 advantage">
+                <i class="icon far fa-clone"></i>
+                <h4>Pellentesque habitant</h4>
+                <p>Pellentesque habitant morbi tristique senectus et netus. Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+        </div>
+    </section>
+    <section class="some-section container">
+        <h2>FEATURED WORKS</h2>
+        <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </section>
+    <section class="gallery-section">
+        <div class="row rows">
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <div class="layer-parent">
+                        <img src="https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="dest">
+                    </div>
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1504164996022-09080787b6b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="something">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1505424297051-c3ad50b055ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="dest">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1503437313881-503a91226402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="something">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-s-8">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="dest">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row rows">
+            <div class="col-4 col-s-8">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1447433865958-f402f562b843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="something">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1434494817513-cc112a976e36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="dest">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="something">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1486611367184-17759508999c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="dest">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-s-4">
+                <div class="img-gallery">
+                    <img src="https://images.unsplash.com/photo-1490775949603-0e355e8e01ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="something">
+                    <div class="layer">
+                        <div class="icons">
+                            <i class="fa fa-camera-retro fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section container">
+        <div class="row">
+            <div class="col-3 col-s-6">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="robo">
+                <h4>Lorem Ipsum</h4>
+            </div>
+            <div class="col-3 col-s-6">
+                <img src="https://images.unsplash.com/photo-1506377711776-dbdc2f3c20d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                <h4>Lorem Ipsum</h4>
+            </div>
+            <div class="col-3 col-s-6">
+                <img src="https://images.unsplash.com/photo-1500627965408-b5f2c8793f17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                <h4>Lorem Ipsum</h4>
+            </div>
+            <div class="col-3 col-s-6">
+                <img src="https://images.unsplash.com/photo-1478358161113-b0e11994a36b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                <h4>Lorem Ipsum</h4>
+            </div>
+        </div>
+    </section>
+    <section class="picture-section">
+        <div class="row">
+            <img class="col-4 col-s-12" src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+
+            <h3 class="">Pellentesque habitant morbi tristique senectus fames.</h3>
+
+            <p class="col-5 col-s-12">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <p class="col-3 col-s-12">Pellentesque habitant morbi tristique senectus et netus.Pellentesque habitant morbi tristique senectus et netus.</p>
+        </div>
+    </section>
+    <section class="number-section container">
+        <div class="row">
+            <div class="col-3 col-s-6">
+                <h2>460</h2>
+                <p>Followers</p>
+            </div>
+            <div class="col-3 col-s-6">
+                <h2>1890</h2>
+                <p>Since</p>
+            </div>
+            <div class="col-3 col-s-6">
+                <h2>1300</h2>
+                <p>Our clients</p>
+            </div>
+            <div class="col-3 col-s-6">
+                <h2>782</h2>
+                <p>Projects</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row container">
+            <div class="col-4 col-s-12">
+                <h3>About us</h3>
+                <p>Pellentesque habitant morbi tristique senectus et netus. Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+            <div class="col-4 col-s-12">
+                <h3>Get in touch</h3>
+                <div class="row">
+                    <div class="col-3">Adress:</div>
+                    <div class="col-9">ul.Miodowa 3a 69-896 Bory tucholskie</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Phone:</div>
+                    <div class="col-9">456546-6656-646</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Email:</div>
+                    <div class="col-9">JohnSmith@00.com</div>
+                </div>
+            </div>
+            <div class="col-4 col-s-12">
+                <h3>Social</h3>
+                <p>Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+        </div>
+        <p>Copyrights 2019</p>
+    </footer>
+</body>
